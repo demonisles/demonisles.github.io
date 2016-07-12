@@ -12,7 +12,7 @@ description: 交流，讨论，分享；思考，总结，沉淀。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://demonisles.com" # the base hostname & protocol for your site
 twitter_username: halfg0d
-github_username:  stardust1900
+github_username:  demonisles
 
 # Build settings
 markdown: kramdown
