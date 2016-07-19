@@ -7,11 +7,11 @@
 
 # Site settings
 title: 魔域桃源
-email: stardust1900@hotmail.com
+email:
 description: 交流，讨论，分享；思考，总结，沉淀。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://demonisles.com" # the base hostname & protocol for your site
-twitter_username: halfg0d
+twitter_username:
 github_username:  demonisles
 
 # Build settings
