@@ -29,11 +29,11 @@ mybatis里mapper太多时启动报错
 
 上次做了两个处理
 
-1. 修改jvm启动参数
+1.	修改jvm启动参数
 
-<img src="/images/2016-09-09/eclipse.jpg"  width="800"/>
+	<img src="/images/2016-09-09/eclipse.jpg"  width="800"/>
 
-2. 把commons-dbcp-1.2.2.jar更换为commons-dbcp-1.4.jar
+2.	把commons-dbcp-1.2.2.jar更换为commons-dbcp-1.4.jar
 
 但是今天启动又报错了。
 
