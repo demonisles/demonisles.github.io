@@ -19,6 +19,8 @@ mat插件：1.6.1
 
 <img src="/images/2017-09-30/mat.png"  width="400"/>
 
+因为hprof是2G，需要在eclipse.ini 中将eclipse启动内存改为3G
+<img src="/images/2017-09-30/ini.png"  width="400"/>
 
 将hprof文件导入mat：
 
