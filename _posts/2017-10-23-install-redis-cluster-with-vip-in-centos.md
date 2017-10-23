@@ -141,6 +141,46 @@ sudo /sbin/ip addr add xx.xx.xx.xx/24 dev eth0
 sudo /sbin/arping -q -c 3 -A xx.xx.xx.xx -I eth0
 {% endhighlight %}
 
+８.测试
+
+执行　redis-cli -p 27000 
+用客户端工具连到redis
+打info命令查看信息
+{% highlight shell %}
+[redis-3.0.3]$ redis-cli -p 27000
+127.0.0.1:27000> info
+# Server
+redis_version:3.0.3
+redis_git_sha1:00000000
+redis_git_dirty:0
+redis_build_id:6211ab7aaf0da33e
+redis_mode:sentinel
+os:Linux 2.6.32-431.el6.x86_64 x86_64
+arch_bits:64
+multiplexing_api:epoll
+gcc_version:4.4.7
+process_id:1460
+run_id:716da5768141ca04b188debf101fc51c831c2cad
+tcp_port:27000
+uptime_in_seconds:25746306
+uptime_in_days:297
+hz:10
+lru_clock:15586700
+config_file:/app/thfd/comm/redis-3.0.3/sentinel.conf
+
+# Sentinel
+sentinel_masters:1
+sentinel_tilt:0
+sentinel_running_scripts:0
+sentinel_scripts_queue_length:0
+master0:name=mymaster,status=ok,address=10.2.209.33:6379,slaves=2,sentinels=3
+127.0.0.1:27000> 
+{% endhighlight %}
+
+可以将master的redis进程kill掉　看master节点和VIP有没有切换
+
+
+
 
 
 
