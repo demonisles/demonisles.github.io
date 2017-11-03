@@ -179,6 +179,52 @@ master0:name=mymaster,status=ok,address=10.2.209.33:6379,slaves=2,sentinels=3
 
 可以将master的redis进程kill掉　看master节点和VIP有没有切换
 
+9.为redis设置开机启动
+
+用root命令，在/etc/init.d/目录下执行：
+
+```bash
+vi redis
+```
+
+写入以下内容
+```bash
+
+#!/bin/sh
+#
+# redis:       Starts the redis server
+#
+# Version:      @(#) /app/allinpal/comm/redis-3.0.3
+#
+# chkconfig: 2345 13 70
+#
+# processname: redis
+#
+# config: /app/allinpal/comm/redis-3.0.3/redis.conf
+
+su - appadm -c "redis-server    /app/allinpal/comm/redis-3.0.3/redis.conf"
+
+su - appadm -c "redis-sentinel /app/allinpal/comm/redis-3.0.3/sentinel.conf  --sentinel &"
+
+```
+
+保存文件。
+执行：
+
+```bash
+chmod +x redis
+
+chkconfig --add redis
+
+chkconfig redis on
+```
+
+查看设置是否成功：
+
+```bash
+chkconfig --list redis
+```
+
 
 
 
