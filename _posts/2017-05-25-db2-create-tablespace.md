@@ -11,7 +11,7 @@ tags: [db2 tablespace]
 
 - 1.查看已有表空间
 
-```
+```sql
     db2pd -d tlb1405 -tablespaces
 ```
 
@@ -19,7 +19,7 @@ tags: [db2 tablespace]
 
 - 2.查看表空间使用缓冲池
 
-```
+```sql
     SELECT tp.TBSPACE, tp.BUFFERPOOLID,bp.BPNAME FROM SYSCAT.TABLESPACES tp left join  SYSCAT.BUFFERPOOLS bp on tp.BUFFERPOOLID=bp.BUFFERPOOLID
 ```
 
@@ -29,7 +29,7 @@ tags: [db2 tablespace]
 
 - 3.创建表空间
 
-```
+```sql
     db2 "create regular tablespace  loan_data_8k pagesize 8k managed by database using(file '/home/db2inst1/db2inst1/NODE0000/TLB1405/loan_data_8k' 1g) bufferpool DAT01"  
 
     db2 "create regular tablespace  loan_index_8k pagesize 8k managed by database using(file '/home/db2inst1/db2inst1/NODE0000/TLB1405/loan_index_8k' 1g) bufferpool DAT01"  
