@@ -4,7 +4,7 @@ title: "检查kafka消息的消费状态"
 author: 王一刀
 description: ""
 category: 
-tags: [python] [kafka]
+tags: [python kafka]
 ---
 
 通过kafka自带的kafka-run-class.sh工具可以检查某一group下consumer消费消息的状态
