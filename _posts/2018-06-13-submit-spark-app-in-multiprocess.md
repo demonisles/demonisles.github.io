@@ -18,7 +18,7 @@ tags: [spark springboot]
 
 如此看来，第三方工具并不好用。只好用第二种方法：自己写程序另起进程提交。并且在livy的日志里我看到一句：
 
-```
+```bash
 18/06/01 14:59:21 INFO SparkProcessBuilder: Running 
 '/home/appadm/app/spark-2.0.2-bin-hadoop2.7/bin/spark-submit' 
 '--deploy-mode' 'client' 
@@ -44,7 +44,7 @@ tags: [spark springboot]
 
 接下来就是在web服务里启进程提交spark app ，代码类似下面这样。
 
-```
+```java
 		String[] arg0 = new String[] { "java", "-Xmx1024M", "-Xms512M", "-XX:MaxPermSize=256M",
 				"-jar",
 				"/app/thfd/apps/mdas-sparkappsubmit.jar",
